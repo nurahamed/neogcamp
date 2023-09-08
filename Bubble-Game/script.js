@@ -1,6 +1,6 @@
 let score = 0;
 let hitrn = 0;
-var timer = 5;
+var timer = 20;
 function getScore() {
   score += 10;
   document.querySelector("#scorevalue").textContent = score;
