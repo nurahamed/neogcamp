@@ -20,19 +20,19 @@ function submitHandler(){
 function calProfitLoss(initial, quantity, current){
     if(initial > current){
         // loss
-        var loss = (initial - current) * quantity;
+        var loss = (initial - current) * quantity.toFixed(2);
         var lossPercentage = ((loss/initial) *100).toFixed(2);
        showOutput(`The loss is ${loss} \n and loss percentage is ${lossPercentage}% `, `${msgColor = "red"}`)
     //    msgColor = "red"
     }else if(current>initial){
         //profit
-        var profit = (current - initial) * quantity;
+        var profit = (current - initial) * quantity.toFixed(2);
         var profitPercentage = ((profit/initial) * 100).toFixed(2);
        showOutput(`The profit is ${profit} \n and profit percentage is ${profitPercentage}% `, `${msgColor = "#03C988"}`)
        
     }else{
         // the rest logic 
-        showOutput(`No pain no gain, no gain no pain${msgColor ="black"}`, `${msgColor = "black"}`);
+        showOutput(`No pain no gain, no gain no pain`, `${msgColor ="black"}`);
     }
 }
 
